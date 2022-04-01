@@ -1,0 +1,22 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "A calculator web application",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odemiit/Calculator.git"
+  },
+  "author": "Odemi Tosanwumi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/odemiit/Calculator/issues"
+  },
+  "homepage": "https://github.com/odemiit/Calculator#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
