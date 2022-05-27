@@ -1,8 +1,7 @@
 // jshint esversion:6
 
-const { response } = require('express');
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
 
 app.get("/", function(req, res) {
