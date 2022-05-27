@@ -2,6 +2,9 @@
 
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: true}));
+//body parser allows you to go into any of your routes. 
 
 
 app.get("/", function(req, res) {
