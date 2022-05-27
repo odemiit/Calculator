@@ -13,6 +13,10 @@ app.get("/", function(req, res) {
 });
 
 app.post("/", function(req, res) {
+
+    var num1 = req.body.num1;
+    var num2 = req.body.num2;
+    
     res.send("Thanks for posting that!");
 });
 
