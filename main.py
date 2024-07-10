@@ -24,15 +24,17 @@ calc_operations = {
   "/": divide
 }
 
-#Ask the user for the first and second number
+#Ask the user for the first number
 num1 = int(input("What's the first number?: "))
-num2 = int(input("What's the second number?: "))
 
 #Loop through the calc operations dictionary and print out each symbol
 for symbol in calc_operations:
   print(symbol)
 #Ask the user for what operation they want based on the symbols
-operation_symbol = input("Pick an operations from the line above: ")
+operation_symbol = input("Pick an operation from the line above: ")
+
+#Ask the user for the second number
+num2 = int(input("What's the second number?: "))
 
 #Perform the function based on the symbol picked and print out the answer
 answer = calc_operations[operation_symbol](num1, num2)
