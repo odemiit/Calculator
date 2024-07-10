@@ -15,3 +15,11 @@ def multiply(n1, n2):
 #Divide Function: Takes 2 numbers and divides one by the other
 def divide(n1, n2):
   return n1 / n2
+
+#A Dictionary to store the functions
+calc_operations = {
+  "+": add,
+  "-": subtract,
+  "*": multiply,
+  "/": divide
+}
