@@ -31,5 +31,9 @@ num2 = int(input("What's the second number?: "))
 #Loop through the calc operations dictionary and print out each symbol
 for symbol in calc_operations:
   print(symbol)
-#ask the user for what operation they want based on the symbols
+#Ask the user for what operation they want based on the symbols
 operation_symbol = input("Pick an operations from the line above: ")
+
+#Perform the function based on the symbol picked and print out the answer
+answer = calc_operations[operation_symbol](num1, num2)
+print(f"{num1} {operation_symbol} {num2} = {answer}")
