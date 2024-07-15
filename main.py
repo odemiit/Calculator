@@ -29,7 +29,7 @@ def calculator():
   print(logo)
   
   #Ask the user for the first number
-  num1 = int(input("What's the first number?: "))
+  num1 = float(input("What's the first number?: "))
   
   #Loop through the calc operations dictionary and print out each symbol
   for symbol in calc_operations:
@@ -42,7 +42,7 @@ def calculator():
     operation_symbol = input("Pick an operation: ")
     
     #Ask the user for the second number
-    num2 = int(input("What's the next number?: "))
+    num2 = float(input("What's the next number?: "))
     
     #Perform the function based on the symbol picked and print out the answer
     answer = calc_operations[operation_symbol](num1, num2)
