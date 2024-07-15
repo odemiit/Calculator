@@ -30,12 +30,24 @@ num1 = int(input("What's the first number?: "))
 #Loop through the calc operations dictionary and print out each symbol
 for symbol in calc_operations:
   print(symbol)
-#Ask the user for what operation they want based on the symbols
-operation_symbol = input("Pick an operation from the line above: ")
+  
+repeat = True
 
-#Ask the user for the second number
-num2 = int(input("What's the second number?: "))
+while repeat:
+  #Ask the user for what operation they want based on the symbols
+  operation_symbol = input("Pick an operation: ")
+  
+  #Ask the user for the second number
+  num2 = int(input("What's the next number?: "))
+  
+  #Perform the function based on the symbol picked and print out the answer
+  answer = calc_operations[operation_symbol](num1, num2)
+  print(f"{num1} {operation_symbol} {num2} = {answer}")
 
-#Perform the function based on the symbol picked and print out the answer
-answer = calc_operations[operation_symbol](num1, num2)
-print(f"{num1} {operation_symbol} {num2} = {answer}")
+  to_continue = input(f"Type 'y' to continue calculating with {answer},\
+ or type 'n' to exit: ")
+
+  if to_continue == "n":
+    repeat = False
+  elif to_continue == "y":
+    num1 = answer
