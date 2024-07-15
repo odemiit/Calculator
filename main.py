@@ -1,4 +1,5 @@
 #Calculator
+from art import logo
 
 #Add Function: Takes 2 numbers and adds them together
 def add(n1, n2):
@@ -24,30 +25,36 @@ calc_operations = {
   "/": divide
 }
 
-#Ask the user for the first number
-num1 = int(input("What's the first number?: "))
-
-#Loop through the calc operations dictionary and print out each symbol
-for symbol in calc_operations:
-  print(symbol)
+def calculator():
+  print(logo)
   
-repeat = True
-
-while repeat:
-  #Ask the user for what operation they want based on the symbols
-  operation_symbol = input("Pick an operation: ")
+  #Ask the user for the first number
+  num1 = int(input("What's the first number?: "))
   
-  #Ask the user for the second number
-  num2 = int(input("What's the next number?: "))
+  #Loop through the calc operations dictionary and print out each symbol
+  for symbol in calc_operations:
+    print(symbol)
   
-  #Perform the function based on the symbol picked and print out the answer
-  answer = calc_operations[operation_symbol](num1, num2)
-  print(f"{num1} {operation_symbol} {num2} = {answer}")
+  repeat = True
+  
+  while repeat:
+    #Ask the user for what operation they want based on the symbols
+    operation_symbol = input("Pick an operation: ")
+    
+    #Ask the user for the second number
+    num2 = int(input("What's the next number?: "))
+    
+    #Perform the function based on the symbol picked and print out the answer
+    answer = calc_operations[operation_symbol](num1, num2)
+    print(f"{num1} {operation_symbol} {num2} = {answer}")
+    
+    to_continue = input(f"Type 'y' to continue calculating with {answer},\
+    or type 'n' to exit: ")
+    
+    if to_continue == "n":
+      repeat = False
+      calculator()
+    elif to_continue == "y":
+      num1 = answer
 
-  to_continue = input(f"Type 'y' to continue calculating with {answer},\
- or type 'n' to exit: ")
-
-  if to_continue == "n":
-    repeat = False
-  elif to_continue == "y":
-    num1 = answer
+calculator()
